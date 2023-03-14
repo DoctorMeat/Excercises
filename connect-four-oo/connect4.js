@@ -13,7 +13,6 @@ class Game{
     this.currPlayer = player1;
     this.makeBoard();
     this.makeHtmlBoard();
-    this.isGameOver = false;
   
   }
 
@@ -89,11 +88,12 @@ placeInTable(y, x) {
 
 endGame(msg) {
   alert(msg);
+  this.isGameOver();
 }
 
 //GAME OVER
 isGameOver(){
-  console.log("GAME OVER");
+  location.reload();
  }
 
 /** handleClick: handle click of column top to play piece */
@@ -119,7 +119,6 @@ handleClick(evt) {
 
   // check for win
   if (this.checkForWin()) {
-    this.isGameOver //HELP
     return this.endGame(`${this.currPlayer.color} won!`);
   }
 
@@ -159,6 +158,9 @@ checkForWin() {
 }
 
 }
+/**
+ * Player Class: Set color and players.
+ */
 
 class Player {
   constructor(color) {

@@ -26,8 +26,8 @@
 }
 
 .container{
-  position: absolute;
-  left: 40%;
+  margin:0 auto;
+  text-align: center;
 
 }
 input{
@@ -35,9 +35,6 @@ input{
   text-align: center;
   
 }
-
-button{
-  position: absolute;
-  left: 40%;
-  top: 110%;
+#board{
+  margin : 0 auto;
 }
