@@ -114,12 +114,12 @@ handleClick(evt) {
 
   // check for tie
   if (this.board.every(row => row.every(cell => cell))) {
-    return this.endGame("tied");
+    return this.endGame(`${(document.getElementById('player1-color').value)} and ${(document.getElementById('player2-color').value)} have tied!`);
   }
 
   // check for win
   if (this.checkForWin()) {
-    this.isGameOver
+    this.isGameOver //HELP
     return this.endGame(`${this.currPlayer.color} won!`);
   }
 
