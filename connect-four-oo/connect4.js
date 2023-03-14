@@ -13,7 +13,7 @@ class Game{
     this.currPlayer = player1;
     this.makeBoard();
     this.makeHtmlBoard();
-    this.isGameActive = true;
+    this.isGameOver = false;
   
   }
 
@@ -92,8 +92,8 @@ endGame(msg) {
 }
 
 //GAME OVER
-isGameActive(){
-  // I can't figure this out.
+isGameOver(){
+  console.log("GAME OVER");
  }
 
 /** handleClick: handle click of column top to play piece */
@@ -114,13 +114,12 @@ handleClick(evt) {
 
   // check for tie
   if (this.board.every(row => row.every(cell => cell))) {
-    this.isGameActive = false;
-    return this.endGame('Tie!');
+    return this.endGame("tied");
   }
 
   // check for win
   if (this.checkForWin()) {
-    this.isGameActive = false;
+    this.isGameOver
     return this.endGame(`${this.currPlayer.color} won!`);
   }
 
