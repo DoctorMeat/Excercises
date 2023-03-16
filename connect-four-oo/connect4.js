@@ -87,8 +87,11 @@ placeInTable(y, x) {
 /** endGame: announce game end */
 
 endGame(msg) {
-  alert(msg);
-  this.isGameOver();
+  setTimeout(() => {
+    alert(msg)
+    this.isGameOver();
+  }, 500);
+  
 }
 
 //GAME OVER
