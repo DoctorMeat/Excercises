@@ -1,0 +1,85 @@
+/* boggle.css */
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+#boggle {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.board {
+  text-align: center;
+  font-size: 24px;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.board td {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+}
+
+p {
+  font-size: 16px;
+}
+
+.score {
+  color: #007bff;
+}
+
+.timer {
+  color: #ff5733;
+}
+
+.add-word input {
+  width: 60%;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.add-word button {
+  padding: 5px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.msg {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.words {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.words li {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.words b {
+  font-weight: bold;
+}
