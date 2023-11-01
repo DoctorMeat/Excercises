@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add a Pet</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h1>Add a Pet</h1>
+      <form method="POST" action="{{ url_for('add_pet') }}" class="mt-4">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+          {{ form.name.label(class="form-label") }} {{
+          form.name(class="form-control") }}
+        </div>
+        <div class="form-group">
+          {{ form.species.label(class="form-label") }} {{
+          form.species(class="form-control") }}
+        </div>
+        <div class="form-group">
+          {{ form.photo_url.label(class="form-label") }} {{
+          form.photo_url(class="form-control") }}
+        </div>
+        <div class="form-group">
+          {{ form.age.label(class="form-label") }} {{
+          form.age(class="form-control") }}
+        </div>
+        <div class="form-group">
+          {{ form.notes.label(class="form-label") }} {{
+          form.notes(class="form-control") }}
+        </div>
+        <div class="form-check form-check-inline">
+          {{ form.available(class="form-check-input") }}
+          <label class="form-check-label ml-2"
+            >{{ form.available.label.text }}</label
+          >
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
